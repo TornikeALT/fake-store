@@ -15,3 +15,12 @@
   align-items: center;
   padding: 1.3rem;
 }
+.product:hover {
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
