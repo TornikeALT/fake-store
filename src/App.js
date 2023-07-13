@@ -3,7 +3,7 @@ import RootLayout from './UI/RootLayout';
 import All from './pages/All';
 import HomePage from './pages/HomePage';
 import Electronics from './pages/Electronics';
-import Jewelry from './pages/Jewelry';
+import Jewelry from './pages/Jewelery';
 import MenCloth from './pages/MenCloth';
 import WomenCloth from './pages/WomenCloth';
 import CategoriesLayout from './UI/CategoriesLayout';
@@ -26,26 +26,29 @@ const router = createBrowserRouter([
         children: [
           { path: '/categories/all', element: <All /> },
           { path: '/categories/electronics', element: <Electronics /> },
-          {
-            path: '/categories/electronics/:productId',
-            element: <ProductDetail />,
-          },
+
           { path: '/categories/jewelery', element: <Jewelry /> },
-          {
-            path: '/categories/jewelery/:productId',
-            element: <ProductDetail />,
-          },
+
           { path: '/categories/mencloth', element: <MenCloth /> },
-          {
-            path: `/categories/men's clothing/:productId`,
-            element: <ProductDetail />,
-          },
+
           { path: '/categories/womencloth', element: <WomenCloth /> },
-          {
-            path: `/categories/women's clothing/:productId`,
-            element: <ProductDetail />,
-          },
         ],
+      },
+      {
+        path: `/categories/women's clothing/:productId`,
+        element: <ProductDetail />,
+      },
+      {
+        path: `/categories/men's clothing/:productId`,
+        element: <ProductDetail />,
+      },
+      {
+        path: '/categories/electronics/:productId',
+        element: <ProductDetail />,
+      },
+      {
+        path: '/categories/jewelery/:productId',
+        element: <ProductDetail />,
       },
     ],
   },

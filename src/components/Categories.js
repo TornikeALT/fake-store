@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from '../styles/Categories.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Categories() {
   const [title, setTitle] = useState('All');
@@ -15,21 +15,66 @@ function Categories() {
             <h2>{title}</h2>
           </div>
           <div className={styles.category_list}>
-            <Link to="all" onClick={handleTitleChange}>
+            <NavLink
+              to="all"
+              onClick={handleTitleChange}
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? 'purple' : '',
+                  color: isActive ? 'white' : 'black',
+                };
+              }}
+            >
               All
-            </Link>
-            <Link to="womencloth" onClick={handleTitleChange}>
+            </NavLink>
+            <NavLink
+              to="womencloth"
+              onClick={handleTitleChange}
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? 'purple' : '',
+                  color: isActive ? 'white' : 'black',
+                };
+              }}
+            >
               Women Cloth
-            </Link>
-            <Link to="mencloth" onClick={handleTitleChange}>
+            </NavLink>
+            <NavLink
+              to="mencloth"
+              onClick={handleTitleChange}
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? 'purple' : '',
+                  color: isActive ? 'white' : 'black',
+                };
+              }}
+            >
               Men Cloth
-            </Link>
-            <Link to="electronics" onClick={handleTitleChange}>
+            </NavLink>
+            <NavLink
+              to="electronics"
+              onClick={handleTitleChange}
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? 'purple' : '',
+                  color: isActive ? 'white' : 'black',
+                };
+              }}
+            >
               Electronics
-            </Link>
-            <Link to="jewelery" onClick={handleTitleChange}>
+            </NavLink>
+            <NavLink
+              to="jewelery"
+              onClick={handleTitleChange}
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? 'purple' : '',
+                  color: isActive ? 'white' : 'black',
+                };
+              }}
+            >
               Jewelery
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -1,0 +1,54 @@
+.container {
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+.details {
+  display: flex;
+  gap: 5rem;
+}
+.details_img {
+  max-width: 30rem;
+}
+.price {
+  color: rgb(157, 20, 20);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.about_box {
+  display: flex;
+  flex-direction: column;
+}
+.about {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+.about_description {
+  max-width: 30rem;
+  color: rgb(113, 110, 110);
+}
+.select_qty {
+  display: grid;
+  grid-template-columns: 30% 15% 15% 40%;
+  align-items: center;
+  border-bottom: 1px solid rgb(205, 200, 200);
+  border-top: 1px solid rgb(205, 200, 200);
+  text-align: center;
+}
+
+.increment {
+  border-bottom: 1px solid rgb(205, 200, 200);
+}
+
+.buttons {
+  border: 1px solid rgb(205, 200, 200);
+  border-top: none;
+  border-bottom: none;
+}
+.qty {
+  border-left: 1px solid rgb(205, 200, 200);
+  text-align: center;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

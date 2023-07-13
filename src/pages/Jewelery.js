@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from '../styles/All.module.css';
 import { useNavigate } from 'react-router-dom';
 
-function All() {
+function Jewelery() {
   const [data, setData] = useState([]);
   const [fetchError, setFetchError] = useState(null);
   const [isloading, setIsLoading] = useState(true);
@@ -11,9 +11,12 @@ function All() {
   useEffect(() => {
     const fetchAllItems = async function () {
       try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch(
+          'https://fakestoreapi.com/products/category/jewelery'
+        );
         if (!response.ok) throw new Error('Something went Wrong!');
         const listItems = await response.json();
+
         setData(listItems);
         setFetchError(null);
       } catch (error) {
@@ -63,4 +66,4 @@ function All() {
     </>
   );
 }
-export default All;
+export default Jewelery;

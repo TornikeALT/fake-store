@@ -1,7 +1,7 @@
 import styles from '../styles/Navigation.module.css';
 import { BsCart4 } from 'react-icons/bs';
 import fakelogo from '../images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Navigation() {
   return (
@@ -12,7 +12,7 @@ function Navigation() {
             <img src={fakelogo} alt="fakelogo" className={styles.fake_logo} />
           </Link>
           <div className={styles.nav_links}>
-            <Link to="/categories/all">CATEGORIES</Link>
+            <NavLink to="categories/all">CATEGORIES</NavLink>
             <Link to="/about">ABOUT</Link>
             <Link to="/contact">CONTACT</Link>
             <div className={styles.cart}>

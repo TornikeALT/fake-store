@@ -1,11 +1,11 @@
 .product_img {
   max-width: 10rem;
-  height: 12rem;
+  min-height: 12rem;
 }
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 .product {
   display: flex;
@@ -15,6 +15,7 @@
   align-items: center;
   padding: 1.3rem;
 }
+
 .product:hover {
   border: 2px solid black;
   cursor: pointer;
