@@ -7,6 +7,7 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchSingleItem = async function () {
@@ -27,6 +28,16 @@ function ProductDetail() {
     fetchSingleItem();
   }, [productId]);
 
+  const handleQtyInc = () => {
+    setQuantity(prev => prev + 1);
+  };
+
+  const handleQtyDec = () => {
+    if (quantity === 1) return;
+    else {
+      setQuantity(prev => prev - 1);
+    }
+  };
   return (
     <>
       {isLoading && <p style={{ textAlign: 'center' }}>Items is loading...</p>}
@@ -52,14 +63,18 @@ function ProductDetail() {
               <p className={styles.about_description}>{product.description}</p>
               <div className={styles.select_qty}>
                 <div>Quantity:</div>
-                <div className={styles.qty}>5</div>
+                <div className={styles.qty}>{quantity}</div>
                 <div className={styles.buttons}>
-                  <div className={styles.increment}>+</div>
-                  <div className={styles.decrement}>-</div>
+                  <div className={styles.increment} onClick={handleQtyInc}>
+                    +
+                  </div>
+
+                  <div className={styles.decrement} onClick={handleQtyDec}>
+                    -
+                  </div>
                 </div>
-                <div className={styles.add_to_cart}>
-                  <button>Add To Cart</button>
-                </div>
+
+                <button className={styles.add_to_cart}>ADD TO CART</button>
               </div>
             </div>
           </div>

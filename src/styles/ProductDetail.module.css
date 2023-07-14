@@ -33,22 +33,51 @@
   border-bottom: 1px solid rgb(205, 200, 200);
   border-top: 1px solid rgb(205, 200, 200);
   text-align: center;
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }
 
 .increment {
   border-bottom: 1px solid rgb(205, 200, 200);
+  height: 40px;
+  transition: 0.3s;
 }
-
+.increment:hover {
+  background-color: rgb(154, 47, 154);
+  color: white;
+}
+.decrement {
+  height: 40px;
+  transition: 0.3s;
+}
+.decrement:hover {
+  background-color: rgb(154, 47, 154);
+  color: white;
+}
 .buttons {
   border: 1px solid rgb(205, 200, 200);
   border-top: none;
   border-bottom: none;
+  cursor: pointer;
 }
 .qty {
   border-left: 1px solid rgb(205, 200, 200);
   text-align: center;
-  height: 44px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+}
+.add_to_cart {
+  background-color: transparent;
+  border: none;
+  height: 80px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.add_to_cart:hover {
+  background-color: rgb(154, 47, 154);
+  color: white;
 }
