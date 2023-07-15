@@ -1,0 +1,12 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+.cart > img {
+  max-width: 100px;
+}
+.qty {
+  display: flex;
+
+  align-items: center;
+}

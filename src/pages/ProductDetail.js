@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../styles/ProductDetail.module.css';
 import ReactStars from 'react-rating-stars-component';
+import { CartContext } from '../context/cart-context';
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -9,6 +10,14 @@ function ProductDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const {
+    items,
+    addToCart,
+    removeFromCart,
+    totalItems,
+    totalPrice,
+    clearCart,
+  } = useContext(CartContext);
 
   useEffect(() => {
     const fetchSingleItem = async function () {
@@ -39,6 +48,7 @@ function ProductDetail() {
       setQuantity(prev => prev - 1);
     }
   };
+
   return (
     <>
       {isLoading && <p style={{ textAlign: 'center' }}>Items is loading...</p>}
@@ -69,6 +79,7 @@ function ProductDetail() {
               <div className={styles.select_qty}>
                 <div>Quantity:</div>
                 <div className={styles.qty}>{quantity}</div>
+
                 <div className={styles.buttons}>
                   <div className={styles.increment} onClick={handleQtyInc}>
                     +
@@ -79,7 +90,12 @@ function ProductDetail() {
                   </div>
                 </div>
 
-                <button className={styles.add_to_cart}>ADD TO CART</button>
+                <button
+                  className={styles.add_to_cart}
+                  onClick={() => addToCart(product, quantity)}
+                >
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </div>
