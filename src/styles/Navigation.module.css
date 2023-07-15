@@ -20,7 +20,7 @@ header {
   align-items: center;
 }
 .nav_links > a {
-  padding: 0 1rem;
+  margin: 0 1rem;
 }
 .cart {
   display: flex;

@@ -12,13 +12,15 @@ function Navigation() {
             <img src={fakelogo} alt="fakelogo" className={styles.fake_logo} />
           </Link>
           <div className={styles.nav_links}>
-            <NavLink to="categories/all">CATEGORIES</NavLink>
+            <Link to="categories/all">CATEGORIES</Link>
             <Link to="/about">ABOUT</Link>
             <Link to="/contact">CONTACT</Link>
-            <div className={styles.cart}>
-              <BsCart4 size={18} className={styles.cart_image} color="red" />
-              <span>CART</span>
-            </div>
+            <Link to="/cart">
+              <div className={styles.cart}>
+                <BsCart4 size={18} className={styles.cart_image} color="red" />
+                <span>CART</span>
+              </div>
+            </Link>
           </div>
         </nav>
       </div>

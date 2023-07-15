@@ -10,6 +10,7 @@ import CategoriesLayout from './UI/CategoriesLayout';
 import ProductDetail from './pages/ProductDetail';
 import About from './components/About';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       { path: '/about', element: <About /> },
       { path: '/contact', element: <Contact /> },
+      { path: '/cart', element: <Cart /> },
 
       {
         path: '/categories',

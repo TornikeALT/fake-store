@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../styles/ProductDetail.module.css';
+import ReactStars from 'react-rating-stars-component';
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -58,6 +59,10 @@ function ProductDetail() {
             </div>
             <div className={styles.about_box}>
               <h1>{product.title}</h1>
+              <span>
+                <ReactStars count={product.rating.rate} size={35} />
+              </span>
+
               <span className={styles.price}> $ {product.price}</span>
               <span className={styles.about}>About This item</span>
               <p className={styles.about_description}>{product.description}</p>

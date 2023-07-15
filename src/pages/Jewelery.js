@@ -44,6 +44,7 @@ function Jewelery() {
             {data.map(item => {
               return (
                 <div
+                  key={item.id}
                   className={styles.product}
                   onClick={() =>
                     navigate(`/categories/${item.category}/${item.id}`)
