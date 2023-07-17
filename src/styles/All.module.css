@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+  padding: 1rem;
 }
 .product {
   display: flex;
@@ -24,4 +25,22 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+/*media Queries*/
+@media only screen and (max-width: 1050px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 787px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
 }

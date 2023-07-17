@@ -57,7 +57,9 @@ function Cart() {
                     <div className={styles.qty}>
                       <h3>Quantity</h3>
                       <button onClick={() => removeFromCart(item.id)}>-</button>
-                      <p> {item.quantity}</p>
+
+                      <p className={styles.quantity_chosen}> {item.quantity}</p>
+
                       <button onClick={() => addToCart(item)}>+</button>
                       <p>Price: ${item.price}</p>
                     </div>
