@@ -65,6 +65,7 @@ function Cart() {
                     </div>
 
                     <div className={styles.trash_icon}>
+                      <p>Remove item:</p>
                       <BsFillTrashFill
                         className={styles.trash}
                         size={20}

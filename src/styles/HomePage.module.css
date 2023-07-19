@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.banner {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 3rem;
+  background-color: rgb(235, 235, 235);
+}
+.banner img {
+  max-width: 40rem;
+}
+.banner_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.shop_btn {
+  padding: 8px 2rem;
+  background-color: #802c6e;
+  color: white;
+  border: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.shop_btn:hover {
+  background-color: #511845;
+}

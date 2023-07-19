@@ -1,0 +1,42 @@
+.slide_container {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slides_wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.slide {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+}
+.slide_image {
+  max-width: 10rem;
+}
+.overflow {
+  overflow: hidden;
+  margin-top: 5rem;
+}
+.trending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrows {
+  gap: 0.5rem;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.arrows svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}

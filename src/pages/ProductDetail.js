@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import styles from '../styles/ProductDetail.module.css';
 import ReactStars from 'react-rating-stars-component';
 import { CartContext } from '../context/cart-context';
@@ -59,6 +59,9 @@ function ProductDetail() {
       )}
       {!isLoading && !fetchError && (
         <div className={styles.container}>
+          <p className={styles.back_btn}>
+            <Link to={-1}>BACK</Link>
+          </p>
           <div className={styles.details}>
             <div>
               <img

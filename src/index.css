@@ -18,6 +18,7 @@ li {
   list-style-type: none;
   text-decoration: none;
 }
-html {
-  overflow: scroll;
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }

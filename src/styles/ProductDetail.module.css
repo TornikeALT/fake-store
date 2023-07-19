@@ -82,6 +82,18 @@
   background-color: rgb(154, 47, 154);
   color: white;
 }
+.back_btn {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.back_btn a {
+  color: rgb(154, 47, 154);
+}
+.back_btn a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* media queries */
 
 @media only screen and (max-width: 1060px) {
@@ -97,6 +109,9 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .details_img {
+    max-width: 15rem;
+  }
   .select_qty {
     font-size: 15px;
   }

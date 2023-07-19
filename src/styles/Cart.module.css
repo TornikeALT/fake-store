@@ -16,6 +16,7 @@
   flex-direction: row;
   padding: 2rem;
   justify-content: center;
+  border-bottom: 1px solid rgb(222, 217, 217);
 }
 .cart_img {
   max-width: 150px;
@@ -48,17 +49,17 @@
 .trash_icon {
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
+  gap: 0.5rem;
+  align-items: center;
 }
 .trash:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 .total_price {
   text-align: center;
 }
-.dashedBottom {
-  border-bottom: 3px dashed black;
-}
+
 .checkout {
   display: flex;
   padding-top: 4rem;
@@ -93,7 +94,6 @@
   .trash_icon {
     display: flex;
     justify-content: center;
-    cursor: pointer;
     margin-top: 2rem;
   }
   .cart_content {
@@ -101,5 +101,11 @@
   }
   .checkout {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 318px) {
+  .qty {
+    flex-direction: column;
+    gap: 0;
   }
 }
