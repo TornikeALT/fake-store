@@ -36,7 +36,9 @@ function Cart() {
   return (
     <>
       {items.length === 0 && (
-        <h2 style={{ textAlign: 'center' }}>Your Shopping Cart is empty</h2>
+        <h2 style={{ textAlign: 'center', padding: '10rem 0' }}>
+          Your Shopping Cart is empty
+        </h2>
       )}
       {items.length !== 0 && (
         <div className={styles.container}>

@@ -7,17 +7,37 @@
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  gap: 3rem;
   background-color: rgb(235, 235, 235);
+  margin-top: 10rem;
 }
+.second_banner {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+  background-color: rgb(235, 235, 235);
+  margin-top: 10rem;
+}
+
 .banner img {
   max-width: 40rem;
+}
+.second_banner img {
+  max-width: 40rem;
+  height: 100%;
+  object-fit: cover;
 }
 .banner_text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+.second_banner_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
 }
 .shop_btn {
   padding: 8px 2rem;
@@ -29,4 +49,41 @@
 }
 .shop_btn:hover {
   background-color: #511845;
+}
+/* Media queries */
+@media only screen and (max-width: 1020px) {
+  .banner img {
+    max-width: 30rem;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .banner img {
+    max-width: 25rem;
+  }
+  .second_banner img {
+    max-width: 25rem;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .banner img {
+    display: none;
+  }
+  .banner_text {
+    align-items: center;
+  }
+  .banner_text h2,
+  p {
+    text-align: center;
+  }
+
+  .second_banner img {
+    display: none;
+  }
+  .second_banner_text {
+    align-items: center;
+  }
+  .second_banner_text h2,
+  p {
+    text-align: center;
+  }
 }

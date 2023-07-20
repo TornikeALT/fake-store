@@ -1,0 +1,29 @@
+.container {
+  margin: 10rem auto 0 0;
+  max-width: 100%;
+  background-color: rgb(154, 47, 154);
+  padding: 6rem 0;
+  color: white;
+}
+.footer_list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem 2rem 1rem;
+}
+.footer_list a {
+  color: white;
+}
+
+.tornike {
+  text-align: center;
+}
+@media screen and (max-width: 428px) {
+  .footer_list {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}

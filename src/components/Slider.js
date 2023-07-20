@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   BsCaretLeftSquareFill,
   BsFillCaretRightSquareFill,
@@ -8,9 +9,9 @@ import styles from '../styles/Slider.module.css';
 function Slider() {
   const [slide, setSlide] = useState(0);
   const [data, setData] = useState([]);
-
   const [fetchError, setFetchError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Set initial loading state to true
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAllItems = async function () {
@@ -23,7 +24,7 @@ function Slider() {
       } catch (error) {
         setFetchError(error.message);
       } finally {
-        setIsLoading(false); // Set loading state to false when the data is fetched
+        setIsLoading(false);
       }
     };
     fetchAllItems();
@@ -38,11 +39,11 @@ function Slider() {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>; // Render loading message while data is fetched
+    return <div>Loading...</div>;
   }
 
   if (fetchError) {
-    return <div>Error: {fetchError}</div>; // Render error message if there's a fetch error
+    return <div>Error: {fetchError}</div>;
   }
 
   return (
@@ -67,12 +68,18 @@ function Slider() {
         <div
           className={styles.slides_wrapper}
           style={{
-            width: `${data.length * 14.5}%`, // Set the width to accommodate all slides
-            transform: `translateX(-${slide * (100 / data.length)}%)`, // Slide transformation
+            width: `${data.length * 14.5}%`,
+            transform: `translateX(-${slide * (100 / data.length)}%)`,
           }}
         >
           {data.map((slide, index) => (
-            <div key={index} className={styles.slide}>
+            <div
+              key={index}
+              className={styles.slide}
+              onClick={() =>
+                navigate(`/categories/${slide.category}/${slide.id}`)
+              }
+            >
               <p>{slide.title}</p>
               <img
                 src={slide.image}
