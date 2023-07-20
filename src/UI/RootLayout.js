@@ -8,7 +8,6 @@ function RootLayout() {
     <>
       <Navigation />
       <Outlet />
-      <Slider />
       <Footer />
     </>
   );

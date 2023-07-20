@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import styles from '../styles/ProductDetail.module.css';
 import ReactStars from 'react-rating-stars-component';
 import { CartContext } from '../context/cart-context';
+import Slider from '../components/Slider';
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -102,6 +103,7 @@ function ProductDetail() {
               </div>
             </div>
           </div>
+          <Slider />
         </div>
       )}
     </>
