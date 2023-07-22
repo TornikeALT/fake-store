@@ -1,9 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../context/cart-context';
 import styles from '../styles/Cart.module.css';
 import { BsFillTrashFill } from 'react-icons/bs';
 import Slider from './Slider';
-import Newsletter from '../components/Newsletter';
 
 function Cart() {
   const {
@@ -92,6 +91,7 @@ function Cart() {
           </div>
         </div>
       )}
+
       <Slider />
     </>
   );

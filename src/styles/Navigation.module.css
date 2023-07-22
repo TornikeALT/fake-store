@@ -38,9 +38,7 @@ header {
   position: relative;
   transition: transform 0.3s ease-in-out;
 }
-.cart_image {
-  padding-right: 0.3rem;
-}
+
 .cart_image:hover {
   scale: 1.1;
 }
@@ -75,5 +73,25 @@ header {
   }
   .nav_links {
     display: none;
+  }
+}
+
+/* Cart notification bump effect */
+.cart_image {
+  transition: transform 0.3s ease;
+  padding-right: 0.3rem;
+}
+
+.bump_effect {
+  animation: bumpAnimation 0.5s ease-in-out;
+}
+
+@keyframes bumpAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
 }

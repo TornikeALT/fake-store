@@ -4,7 +4,6 @@ import macwithcart from '../images/mac&cart.jpg';
 import Slider from '../components/Slider';
 import keyboardwithcart from '../images/second-image.jpg';
 import ImageNavigation from '../components/ImageNavigation';
-import Newsletter from '../components/Newsletter';
 
 function HomePage() {
   return (

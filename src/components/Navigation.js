@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import Modal from './Modal';
 
 function Navigation() {
-  const { items } = useContext(CartContext);
+  const { items, isBumped } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
 
   const handleModalShow = () => {
@@ -45,7 +45,9 @@ function Navigation() {
               <div className={styles.cart}>
                 <BsCart4
                   size={30}
-                  className={styles.cart_image}
+                  className={`${styles.cart_image} ${
+                    isBumped ? styles.bump_effect : ''
+                  }`}
                   color="black"
                 />
 

@@ -6,6 +6,7 @@ const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalItems, setTotalItems] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [isBumped, setIsBumped] = useState(false);
 
   const addToCart = (item, count) => {
     const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
@@ -21,6 +22,13 @@ const CartProvider = ({ children }) => {
     } else {
       setCartItems([...cartItems, { ...item, quantity: quantityToAdd }]);
     }
+
+    //Cart bump effect
+    setIsBumped(true);
+
+    setTimeout(() => {
+      setIsBumped(false);
+    }, 500);
   };
 
   const removeFromCart = itemId => {
@@ -54,6 +62,7 @@ const CartProvider = ({ children }) => {
     deleteFromCart,
     totalItems,
     totalPrice,
+    isBumped,
     clearCart,
   };
   return <CartContext.Provider value={cart}>{children}</CartContext.Provider>;
