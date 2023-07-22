@@ -1,14 +1,17 @@
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { Outlet } from 'react-router-dom';
-import Slider from '../components/Slider';
+import Newsletter from '../components/Newsletter';
 
 function RootLayout() {
   return (
     <>
       <Navigation />
       <Outlet />
-      <Footer />
+      <Newsletter />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

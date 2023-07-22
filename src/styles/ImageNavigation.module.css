@@ -1,0 +1,45 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.grid_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.grid_item {
+  border: 1px solid #ccc;
+  position: relative;
+}
+.overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.grid_item p {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+  }
+  .grid_item p {
+    font-size: 1.5rem;
+  }
+}

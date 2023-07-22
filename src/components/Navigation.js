@@ -39,7 +39,6 @@ function Navigation() {
             <div className={styles.nav_links}>
               <Link to="categories/all">CATEGORIES</Link>
               <Link to="/about">ABOUT</Link>
-              <Link to="/contact">CONTACT</Link>
             </div>
 
             <Link to="/cart">
