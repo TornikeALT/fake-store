@@ -1,19 +1,12 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../context/cart-context';
 import styles from '../styles/Cart.module.css';
 import { BsFillTrashFill } from 'react-icons/bs';
 import Slider from './Slider';
 
 function Cart() {
-  const {
-    items,
-    addToCart,
-    removeFromCart,
-    totalItems,
-    totalPrice,
-    clearCart,
-    deleteFromCart,
-  } = useContext(CartContext);
+  const { items, addToCart, removeFromCart, deleteFromCart } =
+    useContext(CartContext);
 
   const calculateTotalPrice = () => {
     let total = 0;
@@ -37,9 +30,11 @@ function Cart() {
   return (
     <>
       {items.length === 0 && (
-        <h2 style={{ textAlign: 'center', padding: '10rem 0' }}>
-          Your Shopping Cart is empty
-        </h2>
+        <>
+          <h2 style={{ textAlign: 'center', padding: '10rem 0' }}>
+            Your Shopping Cart is empty
+          </h2>
+        </>
       )}
       {items.length !== 0 && (
         <div className={styles.container}>
@@ -84,9 +79,9 @@ function Cart() {
             })}
           </div>
           <div className={styles.checkout}>
-            <h2 className={styles.total_price}>
-              TOTAL PRICE: $ {calculateTotalPrice().toFixed(2)}
-            </h2>
+            <span className={styles.total_price}>
+              TOTAL PRICE: $<p> {calculateTotalPrice().toFixed(2)}</p>
+            </span>
             <button>Go to Checkout</button>
           </div>
         </div>

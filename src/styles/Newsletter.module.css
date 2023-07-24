@@ -19,4 +19,5 @@
 }
 .newsletter button:hover {
   background-color: #4b0e3f;
+  cursor: pointer;
 }

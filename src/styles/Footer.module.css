@@ -16,7 +16,9 @@
 .footer_list a {
   color: white;
 }
-
+.footer_list a:hover {
+  text-decoration: underline;
+}
 .tornike {
   text-align: center;
 }

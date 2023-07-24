@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/All.module.css';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../components/Spinner';
 
 function Electronics() {
   const [data, setData] = useState([]);
@@ -31,9 +32,7 @@ function Electronics() {
   return (
     <>
       <div className={styles.container}>
-        {isloading && (
-          <p style={{ textAlign: 'center' }}>Items are Loading ...</p>
-        )}
+        {isloading && <Spinner />}
         {fetchError && (
           <p
             style={{ color: 'red', textAlign: 'center' }}

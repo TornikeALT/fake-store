@@ -11,14 +11,7 @@ function ProductDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const {
-    items,
-    addToCart,
-    removeFromCart,
-    totalItems,
-    totalPrice,
-    clearCart,
-  } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     const fetchSingleItem = async function () {

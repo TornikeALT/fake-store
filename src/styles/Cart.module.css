@@ -57,9 +57,14 @@
   cursor: pointer;
 }
 .total_price {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
-
+.total_price p {
+  width: 2rem;
+}
 .checkout {
   display: flex;
   padding-top: 4rem;
