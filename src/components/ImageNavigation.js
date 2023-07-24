@@ -14,14 +14,14 @@ function ImageNavigation() {
             <Link to="/categories/mencloth">
               <div className={styles.overlay}></div>
               <img src={mencloth} alt="men clothes" />
-              <p>Mens Cloth</p>
+              <p>Men Clothes</p>
             </Link>
           </div>
           <div className={styles.grid_item}>
             <Link to="/categories/womencloth">
               <div className={styles.overlay}></div>
               <img src={womencloth} alt="women clothes" />
-              <p>Women Cloth</p>
+              <p>Women Clothes</p>
             </Link>
           </div>
           <div className={styles.grid_item}>
@@ -35,7 +35,7 @@ function ImageNavigation() {
             <Link to="/categories/jewelery">
               <div className={styles.overlay}></div>
               <img src={jewelery} alt="jewelery" />
-              <p>Jewelery</p>
+              <p> Jewellery</p>
             </Link>
           </div>
         </div>

@@ -37,7 +37,7 @@ function Categories() {
                 };
               }}
             >
-              Women Cloth
+              Women Clothes
             </NavLink>
             <NavLink
               to="mencloth"
@@ -49,7 +49,7 @@ function Categories() {
                 };
               }}
             >
-              Men Cloth
+              Men Clothes
             </NavLink>
             <NavLink
               to="electronics"
@@ -73,7 +73,7 @@ function Categories() {
                 };
               }}
             >
-              Jewelery
+              Jewellery
             </NavLink>
           </div>
         </div>
