@@ -31,7 +31,13 @@ function Cart() {
     <>
       {items.length === 0 && (
         <>
-          <h2 style={{ textAlign: 'center', padding: '10rem 0' }}>
+          <h2
+            style={{
+              textAlign: 'center',
+              padding: '10rem 0',
+              fontFamily: 'Roboto Mono',
+            }}
+          >
             Your Shopping Cart is empty
           </h2>
         </>

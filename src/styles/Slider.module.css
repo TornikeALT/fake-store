@@ -9,6 +9,7 @@
   display: flex;
   transition: transform 0.3s ease;
 }
+
 .slide {
   padding: 1rem;
   margin: 1rem;
@@ -19,6 +20,10 @@
   border: 1px solid rgb(207, 204, 204);
   max-width: 300px;
   transition: all 0.3s ease-out;
+  font-family: 'Roboto Mono', monospace;
+}
+.slide span {
+  font-weight: 600;
 }
 .slide_image {
   max-width: 10rem;
@@ -34,6 +39,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+}
+.trending {
+  font-family: 'Roboto Mono', monospace;
 }
 .arrows {
   gap: 0.5rem;

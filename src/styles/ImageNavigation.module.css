@@ -4,6 +4,7 @@
   grid-gap: 10px;
   max-width: 80rem;
   margin: 0 auto;
+  font-family: 'Lilita One', cursive;
 }
 .grid_item img {
   width: 100%;

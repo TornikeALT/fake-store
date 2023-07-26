@@ -9,6 +9,7 @@
   padding: 1rem;
   background-color: rgb(235, 235, 235);
   margin-top: 10rem;
+  font-family: 'Roboto Mono', monospace;
 }
 .second_banner {
   display: flex;
@@ -16,6 +17,7 @@
   padding: 1rem;
   background-color: rgb(235, 235, 235);
   margin-top: 10rem;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .banner img {

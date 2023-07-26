@@ -53,7 +53,7 @@ function All() {
                   />
 
                   <p>{item.title}</p>
-                  <span>${item.price}</span>
+                  <span>Price:${item.price}</span>
                 </div>
               );
             })}

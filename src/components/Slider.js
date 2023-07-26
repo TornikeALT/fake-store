@@ -86,7 +86,7 @@ function Slider() {
                 alt={slide.title}
                 className={styles.slide_image}
               />
-              <span>$ {slide.price}</span>
+              <span>Price: ${slide.price}</span>
             </div>
           ))}
         </div>

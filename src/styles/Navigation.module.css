@@ -23,6 +23,8 @@ header {
 
 .nav_links a {
   margin: 0 1rem;
+  color: purple;
+  font-family: 'Roboto Mono', monospace;
 }
 .nav_links {
   color: black;

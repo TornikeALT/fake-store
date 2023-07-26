@@ -48,7 +48,7 @@ function Navigation() {
                   className={`${styles.cart_image} ${
                     isBumped ? styles.bump_effect : ''
                   }`}
-                  color="black"
+                  color="purple"
                 />
 
                 {items.length > 0 && (
