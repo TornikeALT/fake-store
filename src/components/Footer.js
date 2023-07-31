@@ -21,7 +21,7 @@ function Footer() {
             <a href="">Contact</a>
           </li>
         </ul>
-        <h3 className={styles.tornike}>Designed by Tornike Altunashvili</h3>
+        <h3 className={styles.tornike}>Made by Tornike Altunashvili</h3>
       </div>
     </>
   );
